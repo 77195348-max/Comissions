@@ -1,0 +1,670 @@
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(120deg, rgba(16,13,24,.94), rgba(42,22,61,.75)),
+        url("https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+      font-weight: 900;
+      line-height: .95;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .section-title {
+      font-weight: 800;
+      margin-bottom: .8rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .section-space {
+      padding: 90px 0;
+    }
+
+    .service-card,
+    .price-card,
+    .contact-box {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 22px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.2);
+    }
+
+    .service-card {
+      padding: 30px;
+      height: 100%;
+      transition: transform .25s, border-color .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255,95,162,.55);
+    }
+
+    .service-icon {
+      font-size: 2.4rem;
+      color: var(--pink);
+    }
+
+    .portfolio-img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .carousel-caption {
+      background: rgba(0,0,0,.6);
+      border-radius: 14px;
+      padding: 12px 18px;
+    }
+
+    .price-card {
+      padding: 30px;
+      height: 100%;
+    }
+
+    .price {
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--cyan);
+    }
+
+    .btn-art {
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      color: white;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 24px;
+      font-weight: 700;
+    }
+
+    .btn-art:hover {
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(155,108,255,.3);
+    }
+
+    .btn-outline-art {
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      border-radius: 999px;
+      padding: 11px 23px;
+      font-weight: 700;
+    }
+
+    .btn-outline-art:hover {
+      background: var(--cyan);
+      color: #111;
+    }
+
+    .form-control,
+    .form-select {
+      background: #15111f;
+      color: white;
+      border: 1px solid #403751;
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      background: #15111f;
+      color: white;
+      border-color: var(--purple);
+      box-shadow: 0 0 0 .2rem rgba(155,108,255,.15);
+    }
+
+    .form-control::placeholder {
+      color: #8f849e;
+    }
+
+    .accordion-item {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 10px;
+      border-radius: 14px !important;
+      overflow: hidden;
+    }
+
+    .accordion-button {
+      background: var(--card);
+      color: white;
+      font-weight: 700;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: #2a2240;
+      color: var(--cyan);
+      box-shadow: none;
+    }
+
+    .accordion-button::after {
+      filter: invert(1);
+    }
+
+    .accordion-body {
+      color: var(--muted);
+      background: var(--card);
+    }
+
+    .modal-content {
+      background: #20192f;
+      color: white;
+      border: 1px solid #514268;
+      border-radius: 22px;
+    }
+
+    .modal-header,
+    .modal-footer {
+      border-color: rgba(255,255,255,.1);
+    }
+
+    footer {
+      background: #0a0810;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .social-icon {
+      font-size: 1.4rem;
+      color: var(--muted);
+      margin-right: 14px;
+      transition: .2s;
+    }
+
+    .social-icon:hover {
+      color: var(--pink);
+    }
+
+    .small-muted {
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">
+        <i class="bi bi-palette2"></i> ArtCommissions
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+        aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn btn-art btn-sm" href="#contacto">Encargar dibujo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / PORTADA -->
+  <header id="inicio" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <p class="text-uppercase fw-bold mb-3" style="color: var(--cyan);">
+            Ilustración • Diseño • Composición
+          </p>
+
+          <h1>
+            Convierte tus ideas en
+            <span class="gradient-text">arte.</span>
+          </h1>
+
+          <p class="lead my-4" style="color: #ddd3e7; max-width: 650px;">
+            Comisiones de dibujo y composición creadas a tu gusto.
+            Personajes, retratos, ilustraciones y escenas originales para
+            hacer realidad lo que imaginas.
+          </p>
+
+          <a href="#servicios" class="btn btn-art me-2">Ver servicios</a>
+          <a href="#portafolio" class="btn btn-outline-art">Explorar portafolio</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section-space">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">¿Qué puedo dibujar?</h2>
+        <p class="section-subtitle">
+          Elige el tipo de comisión que necesitas y podemos adaptar la idea
+          al estilo y composición que tengas en mente.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <i class="bi bi-person-heart service-icon"></i>
+            <h4 class="mt-3">Personajes</h4>
+            <p class="small-muted">
+              OC, fanart, personajes originales y diseños personalizados.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <i class="bi bi-brush service-icon"></i>
+            <h4 class="mt-3">Ilustraciones</h4>
+            <p class="small-muted">
+              Dibujos completos con fondos, detalles y una composición llamativa.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <i class="bi bi-stars service-icon"></i>
+            <h4 class="mt-3">Composición</h4>
+            <p class="small-muted">
+              Organización de personajes, colores y elementos para crear una escena.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <i class="bi bi-pencil-square service-icon"></i>
+            <h4 class="mt-3">Bocetos</h4>
+            <p class="small-muted">
+              Ideas rápidas y sketches para desarrollar conceptos antes de la ilustración.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAROUSEL / PORTAFOLIO -->
+  <section id="portafolio" class="section-space" style="background: var(--bg-soft);">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Portafolio</h2>
+        <p class="section-subtitle">
+          Algunos ejemplos del tipo de trabajo que puede formar parte de una comisión.
+        </p>
+      </div>
+
+      <div id="carouselArte" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselArte" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselArte" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselArte" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner rounded-4">
+          <div class="carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=1400&q=85"
+              class="portfolio-img" alt="Ejemplo de ilustración artística">
+            <div class="carousel-caption d-block">
+              <h5>Ilustración artística</h5>
+              <p class="mb-0">Colores y detalles adaptados al concepto del cliente.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1400&q=85"
+              class="portfolio-img" alt="Ejemplo de composición visual">
+            <div class="carousel-caption d-block">
+              <h5>Composición visual</h5>
+              <p class="mb-0">Personajes y elementos organizados para contar una idea.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1400&q=85"
+              class="portfolio-img" alt="Ejemplo de dibujo">
+            <div class="carousel-caption d-block">
+              <h5>Conceptos y bocetos</h5>
+              <p class="mb-0">Una primera versión para desarrollar el resultado final.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselArte" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselArte" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section id="precios" class="section-space">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Precios de referencia</h2>
+        <p class="section-subtitle">
+          Los precios pueden cambiar según la cantidad de personajes, detalles y complejidad.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="price-card">
+            <h4>Boceto</h4>
+            <div class="price my-3">S/ 15</div>
+            <p class="small-muted">Ideal para ideas rápidas y diseños sencillos.</p>
+            <hr>
+            <p><i class="bi bi-check2"></i> 1 personaje</p>
+            <p><i class="bi bi-check2"></i> Boceto limpio</p>
+            <p><i class="bi bi-check2"></i> 1 revisión</p>
+            <a href="#contacto" class="btn btn-outline-art w-100 mt-2">Elegir</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="price-card" style="border: 1px solid rgba(255,95,162,.45);">
+            <span class="badge rounded-pill text-bg-danger mb-2">Popular</span>
+            <h4>Ilustración</h4>
+            <div class="price my-3">S/ 35</div>
+            <p class="small-muted">Para un dibujo terminado y con más detalles.</p>
+            <hr>
+            <p><i class="bi bi-check2"></i> 1 personaje</p>
+            <p><i class="bi bi-check2"></i> Color y sombras</p>
+            <p><i class="bi bi-check2"></i> Fondo sencillo</p>
+            <a href="#contacto" class="btn btn-art w-100 mt-2">Elegir</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="price-card">
+            <h4>Composición</h4>
+            <div class="price my-3">S/ 55+</div>
+            <p class="small-muted">Para escenas con varios elementos y mayor detalle.</p>
+            <hr>
+            <p><i class="bi bi-check2"></i> Hasta 2 personajes</p>
+            <p><i class="bi bi-check2"></i> Composición personalizada</p>
+            <p><i class="bi bi-check2"></i> Fondo trabajado</p>
+            <a href="#contacto" class="btn btn-outline-art w-100 mt-2">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section-space" style="background: var(--bg-soft);">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5">
+          <h2 class="section-title">Haz tu pedido</h2>
+          <p class="small-muted">
+            Cuéntame qué quieres dibujar, qué estilo buscas y cualquier referencia
+            que pueda ayudar a entender tu idea.
+          </p>
+          <div class="mt-4">
+            <p><i class="bi bi-envelope-fill me-2" style="color: var(--pink);"></i> artista@ejemplo.com</p>
+            <p><i class="bi bi-clock-fill me-2" style="color: var(--pink);"></i> Respuesta en 24–72 horas</p>
+            <p><i class="bi bi-palette-fill me-2" style="color: var(--pink);"></i> Comisiones personalizadas</p>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="contact-box p-4 p-md-5">
+            <form onsubmit="mostrarMensaje(event)">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="correo" class="form-label">Correo electrónico</label>
+                  <input type="email" id="correo" class="form-control" placeholder="tucorreo@email.com" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="tipo" class="form-label">Tipo de comisión</label>
+                  <select id="tipo" class="form-select" required>
+                    <option value="">Selecciona una opción</option>
+                    <option>Boceto</option>
+                    <option>Ilustración</option>
+                    <option>Composición</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Cuéntame tu idea</label>
+                  <textarea id="mensaje" class="form-control" rows="5"
+                    placeholder="Describe tu personaje, escena, colores, referencias, etc." required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-art w-100">
+                    <i class="bi bi-send-fill me-2"></i>Enviar solicitud
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <div id="mensajeExito" class="alert alert-success mt-3 d-none" role="alert">
+              ¡Solicitud enviada! Este formulario es una demostración para la página.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-space">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Preguntas frecuentes</h2>
+        <p class="section-subtitle">
+          Algunas respuestas para saber cómo funciona una comisión.
+        </p>
+      </div>
+
+      <div class="accordion mx-auto" id="faqAccordion" style="max-width: 850px;">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq1">
+              ¿Cómo hago un pedido?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Completa el formulario de contacto explicando tu idea. Después se pueden
+              conversar los detalles, el precio y el tiempo de entrega.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq2">
+              ¿Puedo enviar referencias?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí. Las referencias ayudan a entender mejor los colores, poses, ropa,
+              personajes y estilo que buscas.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq3">
+              ¿Cuánto demora una comisión?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Depende de la complejidad. Un boceto puede ser más rápido que una
+              ilustración completa o una composición con varios elementos.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq4">
+              ¿Puedo pedir cambios?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí. La cantidad de revisiones depende del tipo de comisión elegido.
+              Lo ideal es indicar los cambios durante la etapa de boceto.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq5">
+              ¿Qué formas de pago aceptas?
+            </button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Puedes adaptar esta sección con los métodos de pago que realmente
+              quieras ofrecer, por ejemplo transferencia, Yape o Plin.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="promoModalLabel">
+            <i class="bi bi-stars me-2" style="color: var(--pink);"></i>
+            ¡Bienvenido!
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+            aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+          <h4>¿Tienes una idea en mente?</h4>
+          <p class="small-muted">
+            Solicita una comisión y cuéntame cómo imaginas tu dibujo.
+            Esta ventana es el modal solicitado para la página.
+          </p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-art" data-bs-dismiss="modal">Cerrar</button>
+          <a href="#contacto" class="btn btn-art" data-bs-dismiss="modal">Ir al formulario</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">ArtCommissions</h5>
+          <p class="small-muted mb-0">
+            Comisiones de dibujo y composición hechas con creatividad y dedicación.
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="fw-bold">Ubicación</h6>
+          <p class="small-muted mb-0">
+            Lima, Perú<br>
+            Atención online
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="fw-bold">Redes</h6>
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+
+      <hr class="my-4" style="border-color: rgba(255,255,255,.1);">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+        <small class="small-muted">© 2026 ArtCommissions. Todos los derechos reservados.</small>
+        <a href="#inicio" class="small text-decoration-none" style="color: var(--cyan);">
+          Volver arriba ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Muestra el modal de bienvenida automáticamente al cargar la página.
+    window.addEventListener("load", function () {
+      const modal = new bootstrap.Modal(document.getElementById("promoModal"));
+      setTimeout(() => modal.show(), 900);
+    });
+
+    // Simulación de envío del formulario.
+    function mostrarMensaje(event) {
+      event.preventDefault();
+      document.getElementById("mensajeExito").classList.remove("d-none");
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>
